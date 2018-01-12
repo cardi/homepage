@@ -17,7 +17,9 @@ YAML-formatted file (`index.yaml`).
 2. (*optional*) Modify `index.m4` with your custom styles
 3. Run `make`
 4. Point your browser's home page to `/path/to/homepage/index.html`:
+
    Firefox: Preferences > "Home page"
+
    Chrome:
    1. Settings > "On startup" > "Open a specific page or set of pages"
    2. Settings > "Appearance" > "Show home button" > "Enter custom web address"
