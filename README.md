@@ -18,14 +18,18 @@ YAML-formatted file (`index.yaml`).
 3. Run `make`
 4. Point your browser's home page to `/path/to/homepage/index.html`:
 
-   Firefox: Preferences > "Home page"
+   *Firefox*: Preferences > "Home page"
 
-   Chrome:
+   *Chrome*:
    1. Settings > "On startup" > "Open a specific page or set of pages"
    2. Settings > "Appearance" > "Show home button" > "Enter custom web address"
 
 *Note*: Setting your New Tab page typically requires an add-on or
 extension.
+
+Firefox users can use
+[New Tab Homepage](https://addons.mozilla.org/en-US/firefox/addon/new-tab-homepage/),
+although as of 2018-Jan-17 this doesn't seem to be working.
 
 You can click on each site link individually, or click on the category
 name to open all the sites in each category at once.
