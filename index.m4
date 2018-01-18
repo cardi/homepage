@@ -12,56 +12,11 @@ dnl You should have received a copy of the CC0 Public Domain Dedication
 dnl along with this software. If not, see
 dnl <http://creativecommons.org/publicdomain/zero/1.0/>.
 dnl
-
 <html>
 <meta charset="UTF-8">
 <meta name="referrer" content="no-referrer">
 <style>
-/*
-  vertical/horiztonal centered fixed-width, flexible height box
-  credit: https://stackoverflow.com/a/6182661
-*/
-
-body, a {
-  font-family: "Helvetica Neue";
-}
-
-a, a:visited, a:hover, a:active {
-  color: #000080;
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.outer {
-  display:  table;
-  position: absolute;
-  height:   99%;
-  width:    99%;
-}
-
-.middle {
-  display:        table-cell;
-  vertical-align: middle;
-}
-
-.inner {
-  margin-left:  auto;
-  margin-right: auto;
-  width:        80%;
-
-  display:               grid;
-  grid-template-columns: repeat(2, [col] auto);
-  grid-gap:              15px;
-}
-
-.box {
-  background-color: #ddd;
-  color:            #fff;
-  border-radius:    5px;
-  padding:          25px;
-  padding-bottom:   40px;
-  font-size:        150%;
-}
+include(index.css)
 </style>
 
 <script>

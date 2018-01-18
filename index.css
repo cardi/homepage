@@ -1,0 +1,45 @@
+/*
+  vertical/horiztonal centered fixed-width, flexible height box
+  credit: https://stackoverflow.com/a/6182661
+*/
+
+body, a {
+  font-family: "Helvetica Neue";
+}
+
+a, a:visited, a:hover, a:active {
+  color: #000080;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.outer {
+  display:  table;
+  position: absolute;
+  height:   99%;
+  width:    99%;
+}
+
+.middle {
+  display:        table-cell;
+  vertical-align: middle;
+}
+
+.inner {
+  margin-left:  auto;
+  margin-right: auto;
+  width:        80%;
+
+  display:               grid;
+  grid-template-columns: repeat(2, [col] auto);
+  grid-gap:              15px;
+}
+
+.box {
+  background-color: #ddd;
+  color:            #fff;
+  border-radius:    5px;
+  padding:          25px;
+  padding-bottom:   40px;
+  font-size:        150%;
+}
