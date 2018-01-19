@@ -24,7 +24,10 @@ import sys, select
 import yaml
 
 if __name__ == '__main__':
+
   # grab yaml from stdin, filename, or use default
+  filename = None
+  stdin = None
   if select.select([sys.stdin,],[],[],0.0)[0]:
     stdin = sys.stdin.read()
   elif len(sys.argv) > 1:
@@ -33,10 +36,19 @@ if __name__ == '__main__':
   else:
     filename = 'index.yaml'
 
-  with open(filename) as f:
-    # assuming valid yaml
-    data = yaml.safe_load(f)
+  # try loading the file from stdin or filename
+  if stdin:
+    data = yaml.safe_load(stdin)
+  elif filename:
+    try:
+      with open(filename) as f:
+        # assuming valid yaml
+        data = yaml.safe_load(f)
+    except (NameError, IOError, FileNotFoundError) as e:
+      print("error loading file: %s" % e, file=sys.stderr)
+      sys.exit(1)
 
+  # build index.yaml and print to stdout
   numCategory = 0
   for category in data:
     print('<div class="box %d">' % numCategory)
