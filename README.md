@@ -9,11 +9,16 @@ YAML-formatted file (`index.yaml`).
 ## Dependencies
 
 * python3
-* PyYaml
+* PyYaml (`convert.py`, `generate.py`)
+* BeautifulSoup (`convert.py`)
 
 ## Usage
 
-1. Edit `index.yaml` with your categories and links
+To generate your homepage (`generate.py`):
+
+1. Edit `index.yaml` with your categories and links (you can also
+generate your list of links from your exported bookmarks.html via
+`python3 convert.py bookmarks.html > index.yaml`)
 2. (*optional*) Modify `index.m4` with your custom styles
 3. Run `make`
 4. Point your browser's home page to `/path/to/homepage/index.html`:
