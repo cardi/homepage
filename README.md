@@ -29,15 +29,23 @@ generate your list of links from your exported bookmarks.html via
    1. Settings > "On startup" > "Open a specific page or set of pages"
    2. Settings > "Appearance" > "Show home button" > "Enter custom web address"
 
-*Note*: Setting your New Tab page typically requires an add-on or
-extension.
-
-Firefox users can use
-[New Tab Homepage](https://addons.mozilla.org/en-US/firefox/addon/new-tab-homepage/),
-although as of 2018-Jan-17 this doesn't seem to be working.
-
 You can click on each site link individually, or click on the category
 name to open all the sites in each category at once.
+
+## Setting Your New Tab Page to Your Generated Homepage
+
+Setting your New Tab page typically requires an add-on or extension.
+
+Firefox users can use [New Tab Override][nto] to display this homepage
+when opening a new tab (in addition or as opposed to a new window).
+However, due to Firefox's APIs, using this feature requires you to
+"upload" the page to the extension, storing a copy in the extension
+itself: whenever you update your homepage, you also have to upload it
+again to this extension.
+(The other alternative is to host it on a local or remote webserver,
+which we don't cover here).
+
+[nto]: https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/
 
 ## Example
 
