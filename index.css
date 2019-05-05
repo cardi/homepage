@@ -1,6 +1,9 @@
 /*
   vertical/horiztonal centered fixed-width, flexible height box
   credit: https://stackoverflow.com/a/6182661
+
+  masonry layout
+  credit: https://w3bits.com/css-masonry/
 */
 
 body, a {
@@ -13,33 +16,54 @@ a, a:visited, a:hover, a:active {
   text-decoration: underline;
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 .outer {
-  display:  table;
-  position: absolute;
-  height:   99%;
-  width:    99%;
 }
 
 .middle {
   display:        table-cell;
-  vertical-align: middle;
+  vertical-align: top;
 }
 
 .inner {
-  margin-left:  auto;
-  margin-right: auto;
-  width:        80%;
+  column-count: 2;
+  column-gap: 1.5em;
+  margin: 1.5em auto;
+  width: 80%;
+}
 
-  display:               grid;
-  grid-template-columns: repeat(2, [col] auto);
-  grid-gap:              15px;
+@media only screen and (min-width: 768px) {
+  .inner {
+    column-count: 3;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .inner {
+    column-count: 1;
+  }
 }
 
 .box {
-  background-color: #ddd;
-  color:            #fff;
-  border-radius:    5px;
-  padding:          25px;
-  padding-bottom:   40px;
-  font-size:        150%;
+  background: #ddd;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 150%;
+  margin: 0 0 1.5em;
+  padding: 1em;
+  width: 100%;
+}
+
+h3 {
+  margin: 0;
+  color: #333;
 }
