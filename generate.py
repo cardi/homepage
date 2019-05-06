@@ -57,6 +57,6 @@ if __name__ == '__main__':
     for entry in data[category]:
       # entry is a dict {"name": "url"}
       for urls in entry:
-        print('<a href="%s">%s</a><br>' % (entry[urls], urls))
+        print('<a href="%s" rel="noreferrer">%s</a><br>' % (entry[urls], urls))
     print('</div>')
     numCategory = numCategory + 1
