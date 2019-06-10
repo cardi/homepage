@@ -12,6 +12,11 @@ YAML-formatted file (`index.yaml`).
 * PyYaml (`convert.py`, `generate.py`)
 * BeautifulSoup (`convert.py`)
 
+Using MacPorts:
+```bash
+sudo port install python37 py37-beautifulsoup4 py37-yaml
+```
+
 ## Usage
 
 To generate your homepage (`generate.py`):
